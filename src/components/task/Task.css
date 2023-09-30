@@ -1,0 +1,61 @@
+.item{
+    display: flex;
+    margin-bottom: 2em;
+    align-items: center;
+    justify-content: space-between;
+    }
+    
+    .mid-container{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+        width: 15em;
+        
+    }
+    
+    .title{
+        align-items:flex-start;
+        font-weight: 700;
+        font-size: x-large;
+        color: #1c226b;
+    }
+    .title p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .description{
+        overflow: auto;
+        font-size: large;
+     
+    }
+    .description p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .check-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2em;
+        width: 5em;
+    }
+
+    .edit{
+        height: 2.5em;
+        width: 2.5em;
+        margin-left: 4em;
+        cursor: pointer;
+    }
+
+    .larger{
+        height: 2em;
+        width: 2em;
+        cursor: pointer;
+    }
+    .date{
+        width: 8em;
+        font-size: large;
+    }

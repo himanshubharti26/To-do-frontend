@@ -1,0 +1,93 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+
+.form{
+    height: 25em;
+    width: 25em;
+    /* border: 1px solid red; */
+    padding: 2em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-image: linear-gradient(120deg,  #96e6a1 0%,#d4fc79 100%);
+    border-radius: 1em;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    /* width: 3em; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.new-head{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0;
+}
+
+.act-but{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2em;
+}
+
+#cancel, #done{
+    margin:1em;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    width: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+}
+
+#cancel{
+    background-color: red;
+}
+
+#done{
+    background-color: blue;
+}
+
+.inp{
+    width:15em;
+    height:2.5em; 
+    outline:none;
+    background: #EEEDE7;
+    border:none;
+    border-radius:0.5em;
+}
+.text-area{
+    outline:none;
+    background: #EEEDE7;
+    border:none;
+    border-radius:0.5em;
+}
+
+.date-inp{
+    
+    font-weight: 600;
+
+}

@@ -1,0 +1,18 @@
+.heading{
+    display: flex;
+    color: #006400;
+}
+
+.head-item{
+    margin-right: 2em;
+    font-weight: 800;
+    font-size:x-large
+}
+
+#task{
+    width: 7em;
+}
+
+#edit{
+    margin-left: 2.5em;
+}
