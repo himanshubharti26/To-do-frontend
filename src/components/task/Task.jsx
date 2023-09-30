@@ -8,7 +8,8 @@ const Task = ({task, handleTaskDelete})=>{
 
     const [status, setStatus] = useState(task.status);
     const navigate = useNavigate();
-    const baseURL = `http://localhost:9000/tasks/${task.id}`;
+    const baseURL = process.env.REACT_APP_BASE_URL;
+    // const baseURL = `http://localhost:9000/tasks/${task.id}`;
     console.log("task in item ==>", task.id);
 
     const handleChange = ()=>{
@@ -22,7 +23,7 @@ const Task = ({task, handleTaskDelete})=>{
         }
 
         try{
-            axios.put(`http://localhost:9000/tasks/${task.id}`, {...task, status:updateStatus}).then(data=>{
+            axios.put(`${baseURL}tasks/${task.id}`, {...task, status:updateStatus}).then(data=>{
                 console.log("status updated success fully",data);
             })
         }catch(err){

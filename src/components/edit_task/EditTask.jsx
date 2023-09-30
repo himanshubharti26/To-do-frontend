@@ -5,9 +5,10 @@ import { useParams } from "react-router-dom";
 
 
 const EditTask = ()=>{
+    const baseURL = process.env.REACT_APP_BASE_URL;
     const {id} = useParams();
     console.log("id in url ===> ",id);
-    const url = `http://localhost:9000/tasks/${id}`;
+    const url = `${baseURL}tasks/${id}`;
     const [task, setTask] = useState({
         title:"",
         description:"",

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./UpdateTask.css"
 import DatePicker  from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const UpdateTask = ({task, heading})=>{
 
-    if(task.dueDate!=""){
+    if(task.dueDate!==""){
         task = {...task, dueDate: new Date(task.dueDate)}
     }else{
         task.dueDate = new Date();
@@ -16,7 +16,7 @@ const UpdateTask = ({task, heading})=>{
     const [newTask, setNewTask] = useState({...task});
     const navigate = useNavigate();
     const URL = useLocation();
-
+    const baseURL = process.env.REACT_APP_BASE_URL;
     
 
     const handleChange = (e) =>{
@@ -43,14 +43,14 @@ const UpdateTask = ({task, heading})=>{
        console.log("path name ==> and task",URL.pathname, task);
         if(URL.pathname==="/new"){
 
-            axios.post("http://localhost:9000/tasks/",newTask).then(data=>{
+            axios.post(`${baseURL}tasks/`,newTask).then(data=>{
                 console.log("new data created:",data);
             }).catch(err=>{
                 console.log("error while creating new task:",err);
             });
         }else{
             console.log("in else update");
-            axios.put(`http://localhost:9000/tasks/${newTask.id}`,newTask).then(data=>{
+            axios.put(`${baseURL}tasks/${newTask.id}`,newTask).then(data=>{
                 console.log("new data created:",data);
             }).catch(err=>{
                 console.log("error while creating new task:",err);

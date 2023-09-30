@@ -29,8 +29,10 @@ const List = ()=>{
     const [list, setList] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const baseURL = "http://localhost:9000/";
+    
+
     useEffect(()=>{
+        const baseURL = process.env.REACT_APP_BASE_URL;
         fetch(`${baseURL}tasks`)
         .then(data=>data.json())
         .then(({allTasks})=>{
@@ -44,11 +46,7 @@ const List = ()=>{
     },[]);
 
     const handleDelete = (id)=>{
-        const newList = list.filter(task=>{
-            if(id!=task.id){
-                return task;
-            }
-        })
+        const newList = list.filter(task=>id!==task.id)
         setList(newList);
     } 
     
