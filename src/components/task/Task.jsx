@@ -38,7 +38,7 @@ const Task = ({task, handleTaskDelete})=>{
         navigate(`edit/${id}`);
     } 
     const handleDelete = () =>{
-        axios.delete(`${baseURL}`).then(data=>console.log("data =>", data));
+        axios.delete(`${baseURL}tasks/${task.id}`).then(data=>console.log("data =>", data));
         handleTaskDelete(task.id);
         // window.location.reload();
 
